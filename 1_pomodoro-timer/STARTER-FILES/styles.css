@@ -22,6 +22,7 @@ body {
   align-items: center;
   border-radius: 50%;
   box-shadow: -5px 14px 44px #000000, 5px -16px 50px rgba(255, 255, 255, 0.15);
+  background-color: #900A0A;
   display: flex;
   height: 518px;
   justify-content: center;
@@ -31,10 +32,17 @@ body {
 
 .ring {
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
   left: 0;
   stroke: #09A65A;
-  top: 0;
   z-index: 1;
+  transform: rotate(-90deg) scaleY(-1);
+}
+
+.ring circle {
+  fill: #900A0A;
 }
 
 .ring.ending circle {
@@ -80,7 +88,7 @@ input[type="text"] {
   outline: none;
 }
 
-input[type=text]:disabled {
+input[type="text"]:disabled {
   border-bottom: none;
 }
 
